@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BuildIcon from '@mui/icons/Build';
-import LinkIcon from '@mui/icons/Link';
+import BuildIcon from '@mui/icons-material/Build';
+import LinkIcon from '@mui/icons-material/Link';
 import {Box, Stack, TextField, IconButton, Button, Paper} from '@mui/material';
 
 
