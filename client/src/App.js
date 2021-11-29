@@ -7,9 +7,12 @@ import Tutorial2 from './Tut2';
 import Tutorial3 from './Tut3';
 import Tutorial4 from './Tut4';
 import Tutorial5 from './Tut5';
+import Tutorial6 from './Tut6';
 import blockIm from './images/Block.png';
 import hashFunc from './images/Hash_Function.png';
 import proofow from './images/PoW.png';
+import p2p from './images/P2P.png';
+import YouTube from 'react-youtube';
 
 function App() {
   const [tutState, setTutState] = useState(0);
@@ -22,6 +25,10 @@ function App() {
         return hashFunc;
       case 2:
         return proofow;
+      case 3:
+        return proofow;
+      case 4:
+        return p2p;
       default:
         return blockIm;
     }
@@ -39,6 +46,8 @@ function App() {
         return <Tutorial4 />;
       case 4:
         return <Tutorial5 />;
+      case 5:
+        return <Tutorial6 />;
       default:
         return <Tutorial1 />;
     }
@@ -54,12 +63,16 @@ function App() {
           </Grid>
           <Grid item xs={12} sm={6} sx={{ height: '50vh' }}>
             <Paper elevation={5} sx={{p: 2, height: '100%', display:'flex', justifyContent:'center', alignItems: 'center'}}>
-              <Box
-                component="img"
-                src={imageSwitch(tutState)}
-                sx={{width: "90%"}}
-                alt="Thumb"
-              />
+              { tutState !== 5 ?
+                  <Box
+                    component="img"
+                    src={imageSwitch(tutState)}
+                    sx={{width: "90%"}}
+                    alt="Thumb"
+                  />
+                :
+                  <YouTube videoId={"rnI_P48Zcjc&t"}/>
+              }
             </Paper>
           </Grid>
           <Grid item xs={12} sm={12} sx={{p: 2, mt: '2vh', height: '50vh', maxWidth: '100vw', overflow: 'auto', display:'flex', alignItems: 'center'}}>
